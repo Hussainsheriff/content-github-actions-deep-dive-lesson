@@ -64,6 +64,5 @@ jobs:
             aws lambda update-function-code \
               --function-name my-function \
               --s3-bucket test-giit-4234dfgd423435vfvc \
-              --s3-key ${{ github.sha }}.zip \
+              --${{ github.repository }}/${{ github.sha }}.zip \
               --publish
-              --s3-bucket 
